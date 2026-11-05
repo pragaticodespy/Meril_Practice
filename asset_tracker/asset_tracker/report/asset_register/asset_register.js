@@ -22,3 +22,4 @@ frappe.query_reports["Asset Register"] = {
 		},
 	],
 };
+

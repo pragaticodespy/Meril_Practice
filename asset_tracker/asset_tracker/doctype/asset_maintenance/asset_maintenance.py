@@ -111,3 +111,4 @@ def send_maintenance_alerts():
 		frappe.db.set_value("Asset Maintenance", m.name, "alert_sent", 1, update_modified=False)
 
 	frappe.db.commit()
+

@@ -1,0 +1,189 @@
+{
+ "charts": [
+  {
+   "chart_name": "Assets by Status",
+   "label": "Assets by Status"
+  },
+  {
+   "chart_name": "Assets by Category",
+   "label": "Assets by Category"
+  }
+ ],
+ "content": "[{\"id\":\"c_status\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Assets by Status\",\"col\":6}},{\"id\":\"c_cat\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Assets by Category\",\"col\":6}},{\"id\":\"s_ast\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assets\",\"col\":3}},{\"id\":\"s_asn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assignments\",\"col\":3}},{\"id\":\"s_mnt\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Maintenance\",\"col\":3}},{\"id\":\"s_rep\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Asset Register\",\"col\":3}},{\"id\":\"card1\",\"type\":\"card\",\"data\":{\"card_name\":\"Asset Management\",\"col\":4}},{\"id\":\"card2\",\"type\":\"card\",\"data\":{\"card_name\":\"Operations\",\"col\":4}},{\"id\":\"card3\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports & Analytics\",\"col\":4}}]",
+ "creation": "2026-11-05 12:45:00",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "box",
+ "idx": 1,
+ "is_hidden": 0,
+ "label": "Asset Tracker",
+ "links": [
+  {
+   "description": "Manage physical assets, equipment and catalog",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Management",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset",
+   "link_count": 0,
+   "link_to": "Asset",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Category",
+   "link_count": 0,
+   "link_to": "Asset Category",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Track assignments, custodians, and maintenance cycles",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Operations",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Assignment",
+   "link_count": 0,
+   "link_to": "Asset Assignment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Maintenance",
+   "link_count": 0,
+   "link_to": "Asset Maintenance",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee",
+   "link_count": 0,
+   "link_to": "Employee",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Financial registers and depreciation logs",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports & Analytics",
+   "link_count": 2,
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Asset Register",
+   "link_count": 0,
+   "link_to": "Asset Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Depreciation Log",
+   "link_count": 0,
+   "link_to": "Asset Depreciation Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-11-05 12:45:00.000000",
+ "modified_by": "Administrator",
+ "module": "Asset Tracker",
+ "name": "Asset Tracker",
+ "number_cards": [
+  {
+   "label": "Total Assets",
+   "number_card_name": "Total Assets"
+  },
+  {
+   "label": "Total Valuation",
+   "number_card_name": "Total Asset Valuation"
+  },
+  {
+   "label": "Assigned Assets",
+   "number_card_name": "Active Assignments"
+  },
+  {
+   "label": "Maintenance Due (7 Days)",
+   "number_card_name": "Maintenance Due Soon"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Assets",
+   "link_to": "Asset",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Assignments",
+   "link_to": "Asset Assignment",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Maintenance",
+   "link_to": "Asset Maintenance",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Categories",
+   "link_to": "Asset Category",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "label": "Asset Register",
+   "link_to": "Asset Register",
+   "type": "Report"
+  }
+ ],
+ "title": "Asset Tracker"
+}

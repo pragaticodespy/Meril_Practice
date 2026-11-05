@@ -6,3 +6,4 @@ from frappe.model.document import Document
 
 class AssetDepreciationLog(Document):
 	pass
+

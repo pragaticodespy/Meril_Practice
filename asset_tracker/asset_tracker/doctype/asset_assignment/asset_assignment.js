@@ -83,3 +83,4 @@ frappe.ui.form.on("Asset Assignment", {
 		}
 	},
 });
+

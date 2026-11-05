@@ -112,3 +112,4 @@ def get_permission_query_conditions(user: str) -> str:
 		return "1=2"
 
 	return ""
+

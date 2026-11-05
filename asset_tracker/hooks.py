@@ -15,15 +15,15 @@ use_json_request_body = True
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "asset_tracker",
-# 		"logo": "/assets/asset_tracker/logo.png",
-# 		"title": "Asset Tracker",
-# 		"route": "/asset_tracker",
-# 		"has_permission": "asset_tracker.api.permission.has_app_permission",
-# 	}
-# ]
+add_to_apps_screen = [
+	{
+		"name": "asset_tracker",
+		"logo": "/assets/frappe/images/framework.png",
+		"title": "Asset Tracker",
+		"route": "/desk/asset-tracker",
+		"sequence_id": 10,
+	}
+]
 
 # The dock, the rail down the left of the desk, is a document rather than a hook. Author it in
 # Manage Dock on a developer-mode site and press Export to App, and it is written to

@@ -92,3 +92,4 @@ def get_upcoming_maintenance(days: int = 7) -> list[dict]:
 			m["asset_status"] = asset_info.asset_status
 
 	return maintenances
+

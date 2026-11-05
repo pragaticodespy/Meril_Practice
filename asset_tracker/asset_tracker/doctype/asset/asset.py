@@ -184,3 +184,4 @@ def has_permission(doc, user: str = None, permission_type: str = None) -> bool:
 		return doc.current_employee in employee_names
 
 	return False
+

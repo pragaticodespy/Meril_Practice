@@ -66,3 +66,4 @@ function complete_maintenance_dialog(frm) {
 	});
 	d.show();
 }
+
