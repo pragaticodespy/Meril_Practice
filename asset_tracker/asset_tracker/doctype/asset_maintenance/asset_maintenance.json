@@ -1,0 +1,155 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "MNT-.#####",
+ "creation": "2026-11-05 12:45:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "maintenance_section",
+  "asset",
+  "maintenance_type",
+  "scheduled_date",
+  "status",
+  "column_break_mnt",
+  "completion_date",
+  "maintenance_cost",
+  "alert_sent",
+  "service_provider",
+  "notes_section",
+  "maintenance_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "maintenance_section",
+   "fieldtype": "Section Break",
+   "label": "Maintenance Details"
+  },
+  {
+   "fieldname": "asset",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Asset",
+   "options": "Asset",
+   "reqd": 1
+  },
+  {
+   "default": "Routine Inspection",
+   "fieldname": "maintenance_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Maintenance Type",
+   "options": "Routine Inspection\nPreventive Maintenance\nRepair\nSoftware Upgrade\nHardware Replacement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "scheduled_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Scheduled Maintenance Date",
+   "reqd": 1
+  },
+  {
+   "default": "Scheduled",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Scheduled\nIn Progress\nCompleted\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_mnt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "completion_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Completion Date"
+  },
+  {
+   "default": "0.0",
+   "fieldname": "maintenance_cost",
+   "fieldtype": "Currency",
+   "label": "Maintenance Cost"
+  },
+  {
+   "default": "0",
+   "fieldname": "alert_sent",
+   "fieldtype": "Check",
+   "label": "7-Day Alert Dispatched",
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_provider",
+   "fieldtype": "Data",
+   "label": "Service Provider / Technician"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "maintenance_notes",
+   "fieldtype": "Small Text",
+   "label": "Maintenance Notes / Details"
+  }
+ ],
+ "grid_page_length": 50,
+ "links": [],
+ "modified": "2026-11-05 12:45:00.000000",
+ "modified_by": "Administrator",
+ "module": "Asset Tracker",
+ "name": "Asset Maintenance",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Asset Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Finance"
+  },
+  {
+   "read": 1,
+   "role": "Employee"
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "search_fields": "asset, maintenance_type, status",
+ "sort_field": "scheduled_date",
+ "sort_order": "ASC",
+ "states": [],
+ "title_field": "asset"
+}

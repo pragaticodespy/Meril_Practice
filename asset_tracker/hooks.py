@@ -109,6 +109,7 @@ use_json_request_body = True
 
 # before_install = "asset_tracker.install.before_install"
 # after_install = "asset_tracker.install.after_install"
+after_migrate = "asset_tracker.setup.after_migrate"
 
 # Uninstallation
 # ------------
@@ -170,13 +171,14 @@ use_json_request_body = True
 # -----------
 # Permissions evaluated in scripted ways
 
-# permission_query_conditions = {
-# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
-# }
-#
-# has_permission = {
-# 	"Event": "frappe.desk.doctype.event.event.has_permission",
-# }
+permission_query_conditions = {
+	"Asset": "asset_tracker.asset_tracker.doctype.asset.asset.get_permission_query_conditions",
+	"Asset Assignment": "asset_tracker.asset_tracker.doctype.asset_assignment.asset_assignment.get_permission_query_conditions",
+}
+
+has_permission = {
+	"Asset": "asset_tracker.asset_tracker.doctype.asset.asset.has_permission",
+}
 
 # Document Events
 # ---------------
@@ -193,23 +195,15 @@ use_json_request_body = True
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"asset_tracker.tasks.all"
-# 	],
-# 	"daily": [
-# 		"asset_tracker.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"asset_tracker.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"asset_tracker.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"asset_tracker.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	"daily": [
+		"asset_tracker.asset_tracker.doctype.asset_maintenance.asset_maintenance.send_maintenance_alerts",
+		"asset_tracker.asset_tracker.doctype.asset.asset.process_monthly_depreciation",
+	],
+	"monthly": [
+		"asset_tracker.asset_tracker.doctype.asset.asset.process_monthly_depreciation",
+	],
+}
 
 # Testing
 # -------

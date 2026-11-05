@@ -1,0 +1,252 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "AST-.#####",
+ "creation": "2026-11-05 12:45:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_section",
+  "asset_name",
+  "category",
+  "department",
+  "column_break_gen",
+  "status",
+  "condition",
+  "current_employee",
+  "financial_section",
+  "purchase_date",
+  "purchase_cost",
+  "column_break_fin",
+  "current_value",
+  "last_depreciation_date",
+  "maintenance_section",
+  "last_maintenance_date",
+  "next_maintenance_date",
+  "disposal_section",
+  "disposal_date",
+  "disposal_reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_section",
+   "fieldtype": "Section Break",
+   "label": "General Information"
+  },
+  {
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Asset Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Category",
+   "options": "Asset Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Department"
+  },
+  {
+   "fieldname": "column_break_gen",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Available",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Available\nAssigned\nUnder Maintenance\nDisposed",
+   "reqd": 1
+  },
+  {
+   "default": "New",
+   "fieldname": "condition",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Condition",
+   "options": "New\nGood\nFair\nDamaged",
+   "reqd": 1
+  },
+  {
+   "fieldname": "current_employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Assigned Employee",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "financial_section",
+   "fieldtype": "Section Break",
+   "label": "Financial & Valuation",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "purchase_date",
+   "fieldtype": "Date",
+   "label": "Purchase Date",
+   "permlevel": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "purchase_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Purchase Cost",
+   "permlevel": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_fin",
+   "fieldtype": "Column Break",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "current_value",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Current Value",
+   "permlevel": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_depreciation_date",
+   "fieldtype": "Date",
+   "label": "Last Depreciation Date",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "maintenance_section",
+   "fieldtype": "Section Break",
+   "label": "Maintenance Summary"
+  },
+  {
+   "fieldname": "last_maintenance_date",
+   "fieldtype": "Date",
+   "label": "Last Maintenance Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "next_maintenance_date",
+   "fieldtype": "Date",
+   "label": "Next Scheduled Maintenance Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "disposal_section",
+   "fieldtype": "Section Break",
+   "label": "Disposal Details"
+  },
+  {
+   "fieldname": "disposal_date",
+   "fieldtype": "Date",
+   "label": "Disposal Date"
+  },
+  {
+   "fieldname": "disposal_reason",
+   "fieldtype": "Small Text",
+   "label": "Disposal Reason"
+  }
+ ],
+ "grid_page_length": 50,
+ "links": [
+  {
+   "group": "Operations",
+   "link_doctype": "Asset Assignment",
+   "link_fieldname": "asset"
+  },
+  {
+   "group": "Operations",
+   "link_doctype": "Asset Maintenance",
+   "link_fieldname": "asset"
+  },
+  {
+   "group": "Financial",
+   "link_doctype": "Asset Depreciation Log",
+   "link_fieldname": "asset"
+  }
+ ],
+ "modified": "2026-11-05 12:45:00.000000",
+ "modified_by": "Administrator",
+ "module": "Asset Tracker",
+ "name": "Asset",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Asset Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Finance"
+  },
+  {
+   "read": 1,
+   "role": "Employee"
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
+   "role": "Asset Manager",
+   "write": 1
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
+   "role": "Finance"
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "search_fields": "asset_name, category, department, current_employee",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "asset_name"
+}

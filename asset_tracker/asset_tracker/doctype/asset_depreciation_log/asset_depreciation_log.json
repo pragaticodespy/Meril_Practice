@@ -1,0 +1,124 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "DEP-.#####",
+ "creation": "2026-11-05 12:45:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "asset",
+  "category",
+  "depreciation_date",
+  "annual_rate",
+  "column_break_dep",
+  "value_before",
+  "depreciation_amount",
+  "value_after",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "asset",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Asset",
+   "options": "Asset",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Asset Category"
+  },
+  {
+   "fieldname": "depreciation_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Depreciation Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "annual_rate",
+   "fieldtype": "Percent",
+   "label": "Annual Depreciation Rate (%)"
+  },
+  {
+   "fieldname": "column_break_dep",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "value_before",
+   "fieldtype": "Currency",
+   "label": "Value Before Depreciation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "depreciation_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Depreciation Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "value_after",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Value After Depreciation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "links": [],
+ "modified": "2026-11-05 12:45:00.000000",
+ "modified_by": "Administrator",
+ "module": "Asset Tracker",
+ "name": "Asset Depreciation Log",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Asset Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Finance"
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "search_fields": "asset, category",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
